@@ -1,0 +1,9 @@
+<h1>Feynman Board</h1>
+<%= form_with model: @topic do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %><br/>
+  <%= form.label :description %>
+  <%= form.text_area :description, :class => 'ckeditor' %><br/>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,18 @@
+<h1>Listing of Topics</h1>
+<%= link_to "Add Topic", new_topic_path %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Progress Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title%></td>
+        <td><%= topic.progress_rate %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
